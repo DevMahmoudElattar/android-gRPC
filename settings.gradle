@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "Kotlin_gRPC"
 include ':app'
 
+include ':Client'
+include ':Server'

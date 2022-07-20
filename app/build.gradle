@@ -86,11 +86,14 @@ dependencies {
     implementation("io.grpc:grpc-kotlin-stub:${grpc_kotlin_stub_version}")
     implementation("io.grpc:grpc-protobuf:${grpc_protobuf_version}")
     implementation("com.google.protobuf:protobuf-kotlin:${protobuf_kotlin_version}")
+    implementation 'io.grpc:grpc-okhttp:1.47.0'
+    runtimeOnly 'io.grpc:grpc-netty-shaded:1.47.0'
+    compileOnly 'org.apache.tomcat:annotations-api:6.0.53'
 }
 
 
 protobuf {
-    //generatedFilesBaseDir = "$projectDir/src/main/generated"
+    generatedFilesBaseDir = "$projectDir/src/main/generated"
     protoc {
         artifact = "com.google.protobuf:protoc:3.21.2"
     }
